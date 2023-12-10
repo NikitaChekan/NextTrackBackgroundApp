@@ -11,8 +11,8 @@
 		DACD46982B2319F90015FFED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD46972B2319F90015FFED /* ContentView.swift */; };
 		DACD469A2B2319FF0015FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACD46992B2319FF0015FFED /* Assets.xcassets */; };
 		DACD469D2B2319FF0015FFED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACD469C2B2319FF0015FFED /* Preview Assets.xcassets */; };
-		DACD46A52B231ADB0015FFED /* BreakButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD46A42B231ADB0015FFED /* BreakButtonView.swift */; };
-		DACD46A72B231B1A0015FFED /* WithoutBreakButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD46A62B231B1A0015FFED /* WithoutBreakButtonView.swift */; };
+		DACD46A72B231B1A0015FFED /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD46A62B231B1A0015FFED /* ButtonView.swift */; };
+		DACD46AC2B23A3720015FFED /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD46AB2B23A3720015FFED /* CustomButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +21,8 @@
 		DACD46972B2319F90015FFED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DACD46992B2319FF0015FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACD469C2B2319FF0015FFED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DACD46A42B231ADB0015FFED /* BreakButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakButtonView.swift; sourceTree = "<group>"; };
-		DACD46A62B231B1A0015FFED /* WithoutBreakButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutBreakButtonView.swift; sourceTree = "<group>"; };
+		DACD46A62B231B1A0015FFED /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		DACD46AB2B23A3720015FFED /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +75,18 @@
 			isa = PBXGroup;
 			children = (
 				DACD46972B2319F90015FFED /* ContentView.swift */,
-				DACD46A42B231ADB0015FFED /* BreakButtonView.swift */,
-				DACD46A62B231B1A0015FFED /* WithoutBreakButtonView.swift */,
+				DACD46A62B231B1A0015FFED /* ButtonView.swift */,
+				DACD46AA2B235C6F0015FFED /* Helpers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DACD46AA2B235C6F0015FFED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DACD46AB2B23A3720015FFED /* CustomButtonStyle.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DACD46A52B231ADB0015FFED /* BreakButtonView.swift in Sources */,
+				DACD46AC2B23A3720015FFED /* CustomButtonStyle.swift in Sources */,
 				DACD46982B2319F90015FFED /* ContentView.swift in Sources */,
 				DACD46962B2319F90015FFED /* NextTrackBackgroundAppApp.swift in Sources */,
-				DACD46A72B231B1A0015FFED /* WithoutBreakButtonView.swift in Sources */,
+				DACD46A72B231B1A0015FFED /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
