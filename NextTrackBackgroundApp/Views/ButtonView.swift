@@ -42,20 +42,9 @@ struct ButtonView: View {
             }
         }
         .buttonStyle(CustomButtonStyle(isPressed: $startAnimate))
-//                    .scaleEffect(startAnimate ? 0.86 : 1)
         .foregroundColor(.black)
         .frame(maxWidth: 60)
     }
-    
-//    private func buttonAction() {
-//        if !startAnimate {
-//            withAnimation(.spring(response: 0.22, dampingFraction: 0.5, blendDuration: 0)) {
-//                startAnimate = true
-//            } completion: {
-//                startAnimate = false
-//            }
-//        }
-//    }
 }
 
 #Preview {

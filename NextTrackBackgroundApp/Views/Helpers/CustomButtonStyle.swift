@@ -22,7 +22,7 @@ struct CustomButtonStyle: ButtonStyle {
             )
             .scaleEffect(isCircleAndScalePressed ? 0.86 : 1)
             .onTapGesture {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0)) {
+                withAnimation(.spring(response: 0.44, dampingFraction: 0.5, blendDuration: 0)) {
                     isCircleAndScalePressed = true
                     isPressed = true
                 }
