@@ -9,26 +9,32 @@ import SwiftUI
 
 struct CustomButtonStyle: ButtonStyle {
     
-    @Binding var isPressed: Bool
-    @State private var isCircleAndScalePressed = false
+    @State private var isProcessingPressBackground = false
+    
+    let duration: TimeInterval = 0.22
+    let scale: CGFloat = 0.86
     
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .background(
-                Circle()
-                    .fill(isCircleAndScalePressed ? Color.white : Color.clear)
-                    .frame(width: 100)
-                    .scaleEffect(isCircleAndScalePressed ? 0.86 : 1)
-            )
-            .scaleEffect(isCircleAndScalePressed ? 0.86 : 1)
-            .onTapGesture {
-                withAnimation(.spring(response: 0.44, dampingFraction: 0.5, blendDuration: 0)) {
-                    isCircleAndScalePressed = true
-                    isPressed = true
+        
+        ZStack {
+            Circle()
+                .foregroundColor(.secondary)
+                .opacity(isProcessingPressBackground ? 0.3 : 0)
+            configuration.label
+                .padding(12)
+        }
+        .scaleEffect(isProcessingPressBackground ? scale : 1)
+        .animation(.easeOut(duration: duration), value: configuration.isPressed)
+        .onChange(of: configuration.isPressed) { newValue in
+            if newValue {
+                withAnimation(.easeOut(duration: duration)) {
+                    isProcessingPressBackground = true
                 }
-            completion: {
-                withAnimation {
-                    isCircleAndScalePressed = false
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    withAnimation(.easeOut(duration: duration)) {
+                        isProcessingPressBackground = false
+                    }
                 }
             }
         }
